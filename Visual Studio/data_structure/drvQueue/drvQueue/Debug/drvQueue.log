@@ -1,0 +1,5 @@
+﻿  drvRngQue.c
+  main.c
+e:\code practice\visual studio\data_structure\drvqueue\source\main.c(34): warning C4101: “one_element”: 未引用的局部变量
+  正在生成代码...
+  drvQueue.vcxproj -> E:\Code Practice\Visual Studio\data_structure\drvQueue\Debug\drvQueue.exe

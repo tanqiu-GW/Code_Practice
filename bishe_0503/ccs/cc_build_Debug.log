@@ -1,0 +1,20 @@
+-----------------------------  bishe.pjt - Debug  -----------------------------
+[appmain.c] "D:\Program Files\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -pdsw225 -fr"E:/Code Practice/bishe_0503/ccs/Debug" -i"E:/Code Practice/bishe_0503/common" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "appmain.c"
+"appmain.c", line 284: error: expected a ")"
+"appmain.c", line 296: error: identifier "img" is undefined
+"appmain.c", line 330: warning: function declared implicitly
+"appmain.c", line 365: error: declaration is incompatible with previous "delay" (declared at line 330)
+"appmain.c", line 559: warning: pointless comparison of unsigned integer with zero
+3 errors detected in the compilation of "appmain.c".
+
+>> Compilation failure
+
+[PI.c] "D:\Program Files\CCStudio_v3.3PLA\C2000\cgtools\bin\cl2000" -g -pdsw225 -fr"E:/Code Practice/bishe_0503/ccs/Debug" -i"E:/Code Practice/bishe_0503/common" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28 -@"Debug.lkf" "PI.c"
+"PI.c", line 1: fatal error: could not open source file "Device.h"
+1 fatal error detected in the compilation of "PI.c".
+Compilation terminated.
+
+>> Compilation failure
+
+Build Complete,
+  4 Errors, 2 Warnings, 0 Remarks.
