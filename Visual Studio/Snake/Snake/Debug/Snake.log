@@ -1,0 +1,17 @@
+﻿  Snake.cpp
+e:\code practice\visual studio\snake\snake\snake.cpp(173): warning C4129: “V”: 不可识别的字符转义序列
+e:\code practice\visual studio\snake\snake\snake.cpp(173): warning C4129: “S”: 不可识别的字符转义序列
+e:\code practice\visual studio\snake\snake\snake.cpp(173): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
+e:\code practice\visual studio\snake\snake\snake.cpp(197): warning C4129: “V”: 不可识别的字符转义序列
+e:\code practice\visual studio\snake\snake\snake.cpp(197): warning C4129: “S”: 不可识别的字符转义序列
+e:\code practice\visual studio\snake\snake\snake.cpp(197): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: 参见“fopen”的声明
+e:\code practice\visual studio\snake\snake\snake.cpp(241): error C4996: 'setbuf': This function or variable may be unsafe. Consider using setvbuf instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(395): note: 参见“setbuf”的声明
+e:\code practice\visual studio\snake\snake\snake.cpp(242): error C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _kbhit. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(459): note: 参见“kbhit”的声明
+e:\code practice\visual studio\snake\snake\snake.cpp(245): error C4996: 'getche': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getche. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(456): note: 参见“getche”的声明
+e:\code practice\visual studio\snake\snake\snake.cpp(254): error C4996: 'getche': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getche. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\conio.h(456): note: 参见“getche”的声明
