@@ -29,6 +29,11 @@ extern "C"{
 
 
 
+#define X86_DEBUG
+#undef X64_DEBUG
+
+
+
 /* 类型定义 */
 typedef enum tagType
 {
@@ -36,7 +41,34 @@ typedef enum tagType
 	CHAR = 1
 }Type;
 
+/* X86，32位编译器下 */
+#ifdef X86_DEBUG
+typedef char S8;
+typedef unsigned char U8;
+typedef short int S16;
+typedef unsigned short int U16;
+typedef int S32;
+typedef unsigned int U32;
+typedef long int SL32;
+typedef unsigned long int UL32;
+typedef long long int S64;
+typedef unsigned long long int U64;
+typedef float F32;
+typedef double F64;
+/* X64，64位编译器下 */
+#else if X64_DEBUG
+typedef char S8;
+typedef unsigned char U8;
+typedef short int S16;
+typedef unsigned short int U16;
+typedef int S32;
+typedef unsigned int U32;
+typedef long int S64;
+typedef unsigned long int U64;
+typedef float F32;
+typedef double F64;
 
+#endif
 
 
 #ifdef __cplusplus

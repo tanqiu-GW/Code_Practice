@@ -3,22 +3,22 @@
  *************************Copyright (C), 2018, ScienTech Inc.**************************
 
  ********************************************************************************
- * @file     	 : Sequential_table.h
- * @brief   		  : Sequential_table.c header file
+ * @file     	 : drvHC595.h
+ * @brief   		  : drvHC595.c header file
  * @author       : gw
  * @version        : 1.0
- * @date          : 2018-12-01
+ * @date          : 2018-12-18
  * 
  * 
  * @note History:
- * @note        :  2018-12-01
+ * @note        : 
  * @note        : 
  *   Modification: Created file
 
 ********************************************************************************/
 
-#ifndef __SEQUENTIAL_TABLE_H__
-#define __SEQUENTIAL_TABLE_H__
+#ifndef __DRVHC595_H__
+#define __DRVHC595_H__
 
 
 #ifdef __cplusplus
@@ -28,26 +28,10 @@ extern "C"{
 #endif /* __cplusplus */
 
 
-/* 头文件 */
-#include "type.h"
-
-
-
-/* 类型定义 */
-typedef struct tagtable
-{
-	void *data;		//顺序表数据指针
-	U32 count;		//顺序表元素计数
-	U32 size;		//顺序表存储容量
-}Table;
-
-
-
-
 
 /* 全局函数声明 */
-extern Table *initTable(Type type ,U32 size);		//初始化顺序表
-extern void printfTable(Type type);					//打印顺序表元素
+extern void init_HC595(void);//初始化595芯片
+extern void send_multbyte_HC595(unsigned char *data, unsigned int len);//多个595芯片级联时，发送多个字节数据
 
 
 #ifdef __cplusplus
@@ -57,4 +41,4 @@ extern void printfTable(Type type);					//打印顺序表元素
 #endif /* __cplusplus */
 
 
-#endif /* __SEQUENTIAL_TABLE_H__ */
+#endif /* __DRVHC595_H__ */

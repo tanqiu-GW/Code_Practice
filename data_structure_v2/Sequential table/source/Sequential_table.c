@@ -39,7 +39,7 @@ static Table *table;
  * @param[in]        int size   
  * @return         
  */
-Table *initTable(Type type, int size)
+Table *initTable(Type type, U32 size)
 {
 	table = (Table *)malloc(sizeof(Table));	//为顺序表指针申请动态内存
 
@@ -47,9 +47,11 @@ Table *initTable(Type type, int size)
 	{
 		case INT:
 			table->data = (int *)malloc(sizeof(int) * size);
+			memset(table->data, 0, sizeof(int) * size);
 			break;
 		case CHAR:
-			table->data = (char *)malloc(sizeof(CHAR) * size);
+			table->data = (char *)malloc(sizeof(char) * size);
+			memset(table->data, 0, sizeof(char) * size);
 		default:
 			break;
 	}
@@ -60,7 +62,6 @@ Table *initTable(Type type, int size)
 		exit(0);
 	}
 	
-	memset(table->data, 0, size);
 	table->count = 0;
 	table->size = size;
 
@@ -76,24 +77,35 @@ Table *initTable(Type type, int size)
  */
 void printfTable(Type type)
 {
-	int i = 0;
-	int *data1;
-	char *data2;
+	U32 i = 0;
+	U32 *data1;
+	U8 *data2;
 	
 	switch (type)
 	{
 		case INT:
+		#if 0
 			for(; i < table->count; i++)
 			{												//table.data声明为void *类型。
 				data1 = (int *)table->data++;				//此处编译不通过，报错void *未知大小。
 				printf("getTableData(%d) = %d\n", i, *data1);//原因是指针大小未知，不能进行++运算。
 			}												//但是我做了强制转换为int型指针了，还是报错
 			break;											//此时报错原因不知。
-		case CHAR:
+		#endif
+			data1 = (int *)table->data;
 			for(; i < table->count; i++)
 			{
-				data2 = (char *)table->data++;
+				printf("getTableData(%d) = %d\n", i, *data1);
+				data1++;
+			}
+			break;
+		case CHAR:
+			data2 = (char *)table->data;
+			for(; i < table->count; i++)
+			{
+				//data2 = (char *)table->data++;
 				printf("getTableData(%d) = %c\n", i, *data2);
+				data2++;
 			}
 
 			if(table->count > 0)
