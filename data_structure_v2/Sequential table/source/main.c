@@ -23,7 +23,7 @@
 #include <string.h>
 #include <malloc.h>
 
-#include "type.h"
+#include "..\..\common\type.h"
 #include "Sequential_table.h"
 
 
@@ -32,16 +32,21 @@
 
 int main(void)
 {
-	Table *table;
-
-	table = initTable(INT, 10);
-#if 0
-	U32 test = 0;
-	test++;
-	table->data = &test;
-	table->count++;
-#endif
+	Table *table1 = initTable(INT, 10);
+	int a = 1;
+	insertTable(INT, 1, &a);
+	insertTable(INT, 2, &a);
+	deleteTable(INT, 2);
 	printfTable(INT);
+	freememory(table1);
+
+	Table *table2 = initTable(CHAR, 10);
+	char b = 'g', c = 'w';
+	insertTable(CHAR, 1, &b);
+	insertTable(CHAR, 2, &c);
+	deleteTable(CHAR, 2);
+	printfTable(CHAR);
+	freememory(table2);
 
 	return 0;
 }

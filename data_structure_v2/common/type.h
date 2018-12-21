@@ -30,7 +30,7 @@ extern "C"{
 
 
 #define X86_DEBUG
-#undef X64_DEBUG
+//#define X64_DEBUG
 
 
 
@@ -40,6 +40,18 @@ typedef enum tagType
 	INT = 0,
 	CHAR = 1
 }Type;
+
+typedef enum tagbool
+{
+	false = 0,
+	true = 1
+}bool;
+
+typedef enum tagstatus
+{
+	success = 0,
+	failed = -1
+}status;
 
 /* X86，32位编译器下 */
 #ifdef X86_DEBUG
