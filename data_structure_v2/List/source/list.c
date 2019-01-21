@@ -25,7 +25,7 @@
 
 
 //局部变量
-static List *list;
+static List *list;	//链表头指针
 
 
 //局部函数
