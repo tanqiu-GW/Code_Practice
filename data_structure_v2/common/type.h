@@ -67,8 +67,10 @@ typedef long long int S64;
 typedef unsigned long long int U64;
 typedef float F32;
 typedef double F64;
+#endif
+#ifndef X86_DEBUG
 /* X64，64位编译器下 */
-#else if X64_DEBUG
+//#else if X64_DEBUG
 typedef char S8;
 typedef unsigned char U8;
 typedef short int S16;
@@ -79,7 +81,6 @@ typedef long int S64;
 typedef unsigned long int U64;
 typedef float F32;
 typedef double F64;
-
 #endif
 
 
