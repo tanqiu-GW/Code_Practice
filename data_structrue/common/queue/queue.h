@@ -3,7 +3,7 @@
  * @Author: gw
  * @Date: 2019-05-29 20:39:38
  * @LastEditors: gw
- * @LastEditTime: 2019-06-01 18:48:25
+ * @LastEditTime: 2019-07-10 22:13:43
  */
 #ifndef __QUEUE_H__
 #define __QUEUE_H__
@@ -32,14 +32,16 @@ typedef struct tagQueue
 
 /* 静态队列 ----------start */
 extern Status queue_static_create(U32 len_queue, U32 len_element, void *buf, sQueue *queue); //静态内存存储队列元素
-
+extern Status queue_static_put();
+extern Status queue_static_get();
 /* 静态队列 ----------end */
 
 
 
 /* 静态队列 ----------start */
 extern Status queue_dynamic_create(U32 len_queue, U32 len_element, sQueue *queue);//动态内存存储队列元素
-
+extern Status queue_dynamic_put();
+extern Status queue_dynamic_get();
 /* 静态队列 ----------end */
 
 
