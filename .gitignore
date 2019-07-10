@@ -1,0 +1,14 @@
+*.vs/
+*.vscode/
+si/
+uv/
+Debug/
+ccs/
+!ccs/*.c
+!ccs/*.h
+*.[oa]
+*.vcxproj
+*.filters
+*.user
+*.sln
+AVIC_shangdian/
