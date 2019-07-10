@@ -16,6 +16,7 @@
  *   Modification: Created file
 
 ********************************************************************************/
+#if 0
 /* 头文件 */
 #include <stdio.h>
 #include <string.h>
@@ -84,14 +85,14 @@ int main(void)
 		}
 		printf("length = %d,sp is %s\n", strlen(sp), sp);
 	}
-#else
+//#else
 	{
 		char p[] = "1234567";
 
 		fun(p, strlen(p));
 		puts(p);
 	}
-#endif
+
 
 	{
 		int x = 3, y = 5, *p = &x, *q = &y;
@@ -101,8 +102,47 @@ int main(void)
 		swap(&x, &y);
 		printf("%d,%d\n", *p, *q);
 	}
+#endif
+
 	return 0;
 }
+#endif
+
+# include<stdio.h>
+#include<string.h>
+# include<malloc.h>
+
+struct Student
+{
+	char name[100];
+
+};
+
+int main(void)
+{
+	int len, i;
+	struct Student * pst;
+	char temp[100] = { 0 };
+
+	printf("number of students:\n");
+	scanf_s("%d", &len);
+	//pst = (struct Student *)malloc(len * sizeof(struct Student));
+
+	for (i = 0; i < len; i++)
+	{
+		printf("input the name of NO.%d\n", i + 1);
+		printf("name:");
+		pst = (struct Student *)malloc(sizeof(struct Student));
+		//scanf_s("%c", temp);
+		//fgets(temp, 100, stdin);
+		gets_s(temp, 100);
+		strcpy_s(pst->name,strlen(temp),temp);
+	}
+
+	return 0;
+
+}
+
 
 /*********************************文件尾********************************
 ***********************************************************************/
